@@ -72,6 +72,22 @@ footer { color: var(--sub); font-size: 13.5px; }
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .shot-row, .cols, .tablet { grid-template-columns: minmax(0, 1fr); }
 }
+@media print {
+  @page { size: A4; margin: 12mm; }
+  :root { --bg: #FFFFFF; }
+  body { padding: 0; background: #fff; font-size: 13.5px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .toc { display: none; }
+  .wrap { gap: 18px; }
+  h1 { font-size: 28px; }
+  figure, .stat, .stats, .tablet, .cols > div, .common li, .p-head { break-inside: avoid; }
+  #cutflow { break-before: page; }
+  .shot-row, .cols { grid-template-columns: 1fr 1fr !important; }
+  .stats { grid-template-columns: repeat(4, 1fr) !important; }
+  .tablet { grid-template-columns: 1.25fr 1fr !important; }
+  .p-head, .stats, .shots, .cols, .common { padding-left: 18px !important; padding-right: 18px !important; }
+  .cols li, .tablet li { font-size: 12.5px; }
+  .shots img { border-radius: 6px; }
+}
 </style>
 </head>
 <body>
