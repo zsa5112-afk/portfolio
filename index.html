@@ -163,20 +163,20 @@ footer { color: var(--sub); font-size: 13.5px; }
   <section class="project p-cf" id="cutflow">
     <div class="p-head">
       <span class="tag">데스크톱 영상 편집기 · 동료 · 지인 대상 설치 파일 배포</span>
-      <h2>CutFlow <small>v2.9.20</small></h2>
-      <p>긴 영상을 불러오면 말을 글로 받아쓰고, 대본에서 원하는 문장을 칠하면 그 구간만 잘라 세로 쇼츠 · 인스타 릴스 · 롱폼으로 만들어 주는 편집기입니다. 캡컷 · 프리미어 프로를 참고해 컷 편집, 자막, 템플릿, 내보내기를 한 흐름으로 묶었습니다.</p>
+      <h2>CutFlow <small>v3.5</small></h2>
+      <p>긴 영상을 불러오면 말을 글로 받아쓰고, 대본에서 원하는 문장을 칠하면 그 구간만 잘라 세로 쇼츠 · 인스타 릴스 · 롱폼으로 만들어 주는 편집기입니다. 캡컷 · 프리미어 프로를 분석해 없는 기능은 더하고, 복잡한 화면은 <b>고르기 → 꾸미기 → 내보내기</b> 세 단계로 다시 설계했습니다.</p>
     </div>
     <div class="stats">
       <div class="stat"><b>3종</b><span>Shorts · 릴스 · 롱폼 동시 출력</span></div>
-      <div class="stat"><b>354</b><span>자동 테스트</span></div>
-      <div class="stat"><b>23k</b><span>코드 줄 (Python · JS · CSS)</span></div>
-      <div class="stat"><b>3배</b><span>미리보기 사본 생성 속도 (GPU)</span></div>
+      <div class="stat"><b>353</b><span>자동 테스트</span></div>
+      <div class="stat"><b>26k</b><span>코드 줄 (Python · JS · CSS)</span></div>
+      <div class="stat"><b>21종</b><span>구간 효과 (화면 15 · 목소리 6)</span></div>
     </div>
     <div class="shots">
-      <figure><img src="assets/cutflow_editor.jpg" alt="CutFlow 편집 화면: 대본, 미리보기, 타임라인" loading="lazy" width="1600" height="900"><figcaption>편집 화면: 왼쪽 대본에서 문장을 칠하면 구간이 들어가고, 가운데에서 결과를 바로 확인, 아래 타임라인에서 다듬기</figcaption></figure>
+      <figure><img src="assets/cutflow_v35_editor.jpg" alt="CutFlow 3.5 편집 화면: 단계 3개, 대본, 미리보기, 다음 할 일, 타임라인 자막 줄" loading="lazy" width="1600" height="900"><figcaption>편집 화면(3.5): 왼쪽 위 단계 3개, 대본에서 문장을 칠하면 구간이 들어가고, 결과 화면 위 '다음 할 일'이 순서를 알려 주며, 타임라인 자막 줄에서 글 · 시간을 바로 고침</figcaption></figure>
       <div class="shot-row">
+        <figure><img src="assets/cutflow_v35_export.jpg" alt="한 화면 내보내기: 요약 카드와 큰 단추" loading="lazy" width="1600" height="900"><figcaption>한 화면 내보내기: 길이 · 구간 · 비율 · 걸리는 시간 요약과 큰 단추 하나</figcaption></figure>
         <figure><img src="assets/cutflow_templates.jpg" alt="템플릿 편집기" loading="lazy" width="1600" height="900"><figcaption>템플릿 편집: 글꼴 굵기 · 테두리 · 그림자를 1 단위로, 플랫폼별 가림 영역 표시</figcaption></figure>
-        <figure><img src="assets/cutflow_home.jpg" alt="홈 화면과 하던 작업" loading="lazy" width="1600" height="900"><figcaption>홈: 하던 작업을 마지막 편집 순으로 바로 이어서</figcaption></figure>
       </div>
       <p class="sub" style="margin:0;color:var(--sub);font-size:13px">화면은 불꽃놀이 영상과 예시 대본으로 찍은 시연용입니다.</p>
     </div>
@@ -187,7 +187,15 @@ footer { color: var(--sub); font-size: 13.5px; }
           <li><b>대본으로 자르기:</b> Whisper(GPU)로 단어 단위 시간까지 받아쓰고, 문장 · 글자를 칠해 컷 편집. '음 · 어'와 쉬는 틈 자동 제거</li>
           <li><b>자막 확인 후 한 번 인코딩:</b> 자른 구간 소리로 자막을 다시 맞추고, 틀린 글자를 고친 뒤 최종 인코딩은 한 번만</li>
           <li><b>템플릿:</b> 제목 · 자막 · 하단 문구 · 로고를 끌어서 배치, 내장 무료 글꼴 굵기별 선택, 이름 붙여 저장하고 꺼내 쓰기</li>
-          <li><b>멀티 출력:</b> 같은 편집으로 Shorts와 인스타 릴스용을 한 번에, 프리미어 · 다빈치 리졸브용 XML · SRT 내보내기</li>
+          <li><b>멀티 출력:</b> 같은 편집으로 Shorts와 인스타 릴스용을 한 번에, 1:1 · 16:9 도 같이 저장, 프리미어 · 다빈치 리졸브용 XML · SRT 내보내기 · 가져오기</li>
+          <li><b>캡컷 · 프리미어 분석 후 추가:</b> 구간 효과 15종(줌 · 글리치 · VHS · 흐림 등) · 목소리 효과 6종 · 크로마 키 · 역재생 · 정지 화면 · 전환 10종 · 글 상자 키프레임 · 장면 바뀌는 곳 자동 분할 · 프로젝트 파일과 버전 기록 · 유튜브 16:9 썸네일 만들기</li>
+        </ul>
+        <h3>사용자 중심 다시 설계 (3.x)</h3>
+        <ul>
+          <li><b>단계 3개 · 속성 판 하나:</b> 6단계 탭을 고르기 → 꾸미기 → 내보내기로 줄이고, 오른쪽 판은 고른 것에 맞춰 바뀌는 속성 판 하나로</li>
+          <li><b>미리보기에서 바로 고치기:</b> 화면의 자막 · 제목을 누르면 그 자리에 크기 · 색 · 굵게 도구 막대 (미리캔버스 방식)</li>
+          <li><b>쉬운 보기 / 전문가 보기 · 다음 할 일 · 되돌리기 단추:</b> 처음 쓰는 사람은 필요한 것만, 알림마다 [되돌리기], 필터는 마우스만 올려도 미리 보기</li>
+          <li><b>측정으로 점검:</b> 단추 겹침 · 24px 미만 단추 · 작은 글자 · 글자 대비(4.5:1)를 화면마다 자동으로 재서 0이 될 때까지 고침 (대비 부족 약 300곳 → 색 견본 2곳만 남음)</li>
         </ul>
       </div>
       <div>
